@@ -1,0 +1,370 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: black;
+    color: white;
+}
+
+.header {
+    font-family: 'Roboto', sans-serif;
+    padding: 20px 10px;
+    background-color: black;
+    color: white;
+    position: relative;
+}
+
+.header_contenedor {
+    display: flex;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contenedor_imagenes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    width: 100%;
+    margin: 0;
+    padding-top: 20px;
+}
+
+.contenedor_imagenes img {
+    display: none;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.contenedor_imagenes img.activa {
+    display: block;
+}
+.titulo_centrado {
+    text-align: center;
+    margin-top: 20px;
+}
+.productos_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 350px));
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.card_producto {
+    background-color: white;
+    color: black;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    text-align: center;
+    margin: 0;
+    max-width: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+
+.card_producto img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.card_producto h3 {
+    margin: 10px 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.card_producto .producto_descripcion {
+    padding: 0 10px 10px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.card_producto .precio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.card_producto .precio_descuento {
+    font-size: 1.5em; 
+    font-weight: bold;
+    color: white;
+}
+
+.btn_carrito {
+    display: inline-block;
+    margin: 10px 0;
+    padding: 10px 20px;
+    border: 1px solid white; 
+    background-color: rgb(7, 94, 148); 
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease; 
+    font-family: 'Roboto', sans-serif;
+}
+
+.btn_carrito:hover {
+    background-color: rgb(60, 149, 205); 
+}
+nav ul.menu {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
+
+nav ul.menu li {
+    margin: 0 10px;
+}
+
+nav ul.menu a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+.menu_toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .contenedor_imagenes {
+        height: auto;
+    }
+
+    .contenedor_imagenes img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .productos_destacados {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .productos_destacados .producto {
+        margin-bottom: 20px;
+    }
+
+    nav ul.menu {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        background-color: black;
+        width: 100%;
+        position: static;
+        top: 0;
+    }
+
+    nav ul.menu.menu_active {
+        display: flex;
+    }
+
+    .menu_toggle {
+        display: block;
+        cursor: pointer;
+        font-size: 24px;
+        background: none;
+        border: none;
+        color: white;
+        margin-top: 20px;
+    }
+}
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    border-top: 3px double white;
+    border-bottom: 1px solid white;
+    position: relative;
+    margin-top: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.footer_izquierda {
+    width: 40%;
+}
+
+.footer_derecha {
+    width: 60%;
+}
+
+/* ventanas modales */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; 
+    background-color: rgba(0, 0, 0, 0.4); 
+}
+
+.modal_content {
+    background-color: #fefefe;
+    margin: 15% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; 
+    max-width: 300px; 
+    transform: translateY(-50%); 
+}
+
+.close {
+    color: #ee0e0e;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover, .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.review {
+    display: flex;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.review_photo {
+    border-radius: 50%;
+    width: 50px; 
+    margin-right: 15px;
+}
+
+.review_name {
+    font-weight: bold;
+}
+
+.review_stars {
+    color: gold;
+}
+.redes_sociales {
+    background-color: #333;
+    text-align: center;
+    padding: 5px 0;
+}
+
+.redes_sociales a {
+    margin: 0 20px;
+    display: inline-block;
+}
+
+.redes_sociales img {
+    width: 15px; 
+    height: auto;
+    font-family: 'Roboto', sans-serif;
+}
+/* formulario de contacto */
+.contenedor_formulario {
+    background-color: white;
+    color: black;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 0 auto; 
+    font-family: 'Roboto', sans-serif;
+}
+
+.formulario_contacto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.grupo_formulario {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 500px;
+    padding-left: 10px; 
+    padding-right: 10px; 
+    margin-left: auto; 
+    margin-right: auto; 
+    font-family: 'Roboto', sans-serif;
+}
+
+.grupo_formulario label {
+    margin-bottom: 5px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.grupo_formulario input,
+.grupo_formulario textarea {
+    width: 100%; 
+    max-width: 500px; 
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.btn_enviar {
+    padding: 10px 20px;
+    border: none;
+    background-color: rgb(7, 94, 148);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+}
+
+.btn_enviar:hover {
+    background-color: rgb(60, 149, 205);
+}
+
+@media (max-width: 768px) {
+    .formulario_contacto {
+        padding: 10px;
+    }
+
+    .grupo_formulario input,
+    .grupo_formulario textarea {
+        width: 100%; 
+        max-width: 100%; 
+    }
+
+    .footer_izquierda, .footer_derecha {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contenedor_formulario {
+        background-color: white;
+        color: black;
+        padding: 20px 30px; 
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        max-width: 600px;
+        margin: 0 auto; 
+    }
+}

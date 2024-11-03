@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accesorios de Computación</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="contenedor_imagenes">
+            <img src="images/portada1.jpg" alt="Imagen 1" class="activa">
+            <img src="images/portada2.jpg" alt="Imagen 2">
+            <img src="images/portada3.jpg" alt="Imagen 3">
+        </div>
+        <button class="menu_toggle" aria-label="Abrir menú">☰</button>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">I n i c i o</a></li>
+                <li><a href="productos.html">P r o d u c t o s</a></li>
+                <li><a href="contacto.html">C o n t a c t o</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="destacados">
+            <h2 class="titulo_centrado">Productos Destacados</h2>
+            <div class="productos_grid">
+                <article class="card_producto">
+                    <img src="images/art1.jpg" alt="Producto 1" class="producto_img">
+                    <h3>Cooler para Notebook</h3>
+                    <p class="producto_descripcion">Producto pensado para disminuir la temperatura generada por la computadora.</p>
+                    <div class="precio">
+                        <p class="precio_descuento">$25.999</p>
+                    </div>
+                    <button class="btn_carrito" onclick="abrirModal('modal1')">Ver Opiniones</button>
+                </article>
+                <div id="modal1" class="modal">
+                    <div class="modal_content">
+                        <span class="close" onclick="cerrarModal('modal1')">&times;</span>
+                        <div class="review">
+                            <img src="images/r1.jpg" alt="Foto de Juan Gómez" class="review_photo">
+                            <div>
+                                <div class="review_name">Ana Pérez</div>
+                                <div class="review_stars">★★★★★</div>
+                                <div class="review_text">"La calidad de construcción es impresionante, y el rendimiento es aún mejor. Me encantó desde el primer uso. No podría estar más satisfecho con la compra."</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <article class="card_producto">
+                    <img src="images/art2.jpg" alt="Producto 2" class="producto_img">
+                    <h3>Procesadores Ryzen de AMD</h3>
+                    <p class="producto_descripcion">Eficientes en términos de energía y ofrecer un rendimiento potente.</p>
+                    <div class="precio">
+                        <p class="precio_descuento">$286.984</p>
+                    </div>
+                    <button class="btn_carrito" onclick="abrirModal('modal2')">Ver Opiniones</button>
+                </article>
+                <div id="modal2" class="modal">
+                    <div class="modal_content">
+                        <span class="close" onclick="cerrarModal('modal2')">&times;</span>
+                        <div class="review">
+                            <img src="images/r2.jpg" alt="Foto de Juan Gómez" class="review_photo">
+                            <div>
+                                <div class="review_name">María López</div>
+                                <div class="review_stars">★★★★★</div>
+                                <div class="review_text">"Es simplemente increíble. La duración de la batería sobrepasa mis expectativas, y la interfaz es tan fácil de usar. Lo recomiendo a todos."</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <article class="card_producto">
+                    <img src="images/art3.jpg" alt="Producto 3" class="producto_img">
+                    <h3>Auricular Extremo</h3>
+                    <p class="producto_descripcion">Aísla el ruido externo y dejan salir todo o gran parte del sonido que generan.</p>
+                    <div class="precio">
+                        <p class="precio_descuento">$80.000</p>
+                    </div>
+                    <button class="btn_carrito" onclick="abrirModal('modal3')">Ver Opinioness</button>
+                </article>
+                <div id="modal3" class="modal">
+                    <div class="modal_content">
+                        <span class="close" onclick="cerrarModal('modal3')">&times;</span>
+                        <div class="review">
+                            <img src="images/r3.jpg" alt="Foto de Juan Gómez" class="review_photo">
+                            <div>
+                                <div class="review_name">Juan Gómez</div>
+                                <div class="review_stars">★★★★★</div>
+                                <div class="review_text">"Un cambio total en mi rutina diaria. Nunca pensé que un producto podría hacer mi vida tan fácil. Diseño elegante y funcionalidad superior."</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <article class="card_producto">
+                    <img src="images/art4.jpg" alt="Producto 4" class="producto_img">
+                    <h3>Teclado Ergonómico</h3>
+                    <p class="producto_descripcion">Pensado para que la posición de las manos sea lo más natural posible.</p>
+                    <div class="precio">
+                        <p class="precio_descuento">$20.499</p>
+                    </div>
+                    <button class="btn_carrito" onclick="abrirModal('modal4')">Ver Opiniones</button>
+                </article>
+                <div id="modal4" class="modal">
+                    <div class="modal_content">
+                        <span class="close" onclick="cerrarModal('modal4')">&times;</span>
+                        <div class="review">
+                            <img src="images/r4.jpg" alt="Foto de Juan Gómez" class="review_photo">
+                            <div>
+                                <div class="review_name">Carlos Sánchez</div>
+                                <div class="review_stars">★★★★★</div>
+                                <div class="review_text">"Cada detalle está cuidado al máximo. Los materiales son de alta calidad, y se nota el esfuerzo puesto en el diseño. Vale cada centavo."</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer_izquierda">
+            <p>Teléfono: 0800-999-2727</p>
+            <p>Dirección: Balcarce 50, Ciudad Autónoma de Buenos Aires</p>
+        </div>
+        <div class="footer_derecha">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.479922849847!2d-58.37922088476973!3d-34.61176068045885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccacae6e1df1f%3A0x466d907b40b07a1!2sBalcarce%2050%2C%20C1064%20Buenos%20Aires%2C%20Argentina!5e0!3m2!1ses-419!2ses!4v1632501378145!5m2!1ses-419!2ses" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </footer>
+    <div class="redes_sociales">
+        <a href="https://www.instagram.com" target="_blank">
+            <img src="images/ig.svg" alt="Instagram">
+        </a>
+        <a href="https://www.x.com" target="_blank">
+            <img src="images/x.svg" alt="X">
+        </a>
+        <a href="https://www.facebook.com" target="_blank">
+            <img src="images/fc.svg" alt="Facebook">
+        </a>
+    </div>  
+    <script src="js/script.js"></script>  
+</body>
+</html>
